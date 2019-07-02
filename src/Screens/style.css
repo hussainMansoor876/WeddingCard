@@ -1,0 +1,91 @@
+.form1{
+    margin: 150px 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px 0 60px 0;
+    text-align: center;
+}
+
+.input1{
+    margin: 10px 0;
+    width: 60%;
+    height: 30px;
+    border: 1px solid #E0E0E0;
+}
+
+.input2{
+    margin: 10px 0;
+    width: 25%;
+    height: 30px;
+    border: 1px solid #E0E0E0;
+}
+
+.btn1{
+    margin: 10px 0;
+    background-color: #37A000;
+    color: #fff;
+    width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-color: transparent;
+    height: 35px;
+}
+
+.btn2{
+    margin: 10px 0;
+    background-color: #37A000;
+    color: #fff;
+    width: 20%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-color: transparent;
+    height: 35px;
+}
+
+.btn3{
+    margin: 10px 0;
+    background-color: #37A000;
+    color: #fff;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-color: transparent;
+    height: 35px;
+}
+
+.navbar-brand{
+     color: #fff !important;
+}
+
+nav{
+    background-color: #37A000 !important;
+}
+
+.invitation{
+     text-align: center;
+}
+
+.opt{
+    width: 10%;
+}
+
+h2{
+    text-align: center;
+    font-weight: normal;
+}
+
+.menu1{
+    margin-top: 50px;
+    padding: 10px 400px;
+}
+
+.text1{
+    width: 80%;
+    height: 120px;
+    border: 1px solid #E0E0E0;
+}
+
+
+.text1:hover{
+    border: 1px solid blue;
+}
+
+.text1:focus{
+    border: 1px solid #37A000;
+}
