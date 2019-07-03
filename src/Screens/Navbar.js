@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { updateUser } from '../Redux/actions/authActions'
+import { users } from '../Redux/actions/authActions'
 import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
@@ -49,7 +49,6 @@ class Navbar extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("mapToState", state.authReducer)
   return {
     user: state.authReducer.user,
   }
@@ -57,7 +56,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateUser: (user) => dispatch(updateUser(user)),
+    users: (user) => dispatch(users(user)),
   }
 }
 

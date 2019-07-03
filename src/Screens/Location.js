@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { updateUser } from '../Redux/actions/authActions'
+import { users } from '../Redux/actions/authActions'
 import Navbar from './Navbar';
+import firebase from '../firebase';
+
 class Location extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       pass: '',
@@ -13,7 +15,12 @@ class Location extends Component {
     }
   }
 
-  checkPassword(){
+  componentDidMount() {
+    const { allData } = this.props
+    firebase.database().ref('users').push(allData)
+  }
+
+  checkPassword() {
     this.setState({
     })
   }
@@ -29,16 +36,16 @@ class Location extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log("mapToState",state.authReducer)
-    return {
-      user: state.authReducer.user,
-    }
+  console.log("mapToState", state.authReducer)
+  return {
+    allData: state.authReducer,
   }
-  
-  const mapDispatchToProps = (dispatch) => {
-    return {
-      updateUser: (user) => dispatch(updateUser(user)),
-    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    users: (user) => dispatch(users(user)),
   }
-  
-  export default connect(mapStateToProps,mapDispatchToProps)(Location);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Location);

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { updateUser } from '../Redux/actions/authActions'
+import { users,requirements } from '../Redux/actions/authActions'
 import Navbar from './Navbar';
 
 class Menu extends Component {
@@ -14,6 +14,8 @@ class Menu extends Component {
   }
 
   updatePage(){
+    const { textBox } = this.state
+    this.props.requirements(textBox)
     this.props.history.push('./location')
   }
 
@@ -38,12 +40,16 @@ const mapStateToProps = (state) => {
     console.log("mapToState",state.authReducer)
     return {
       user: state.authReducer.user,
+      curr: state.authReducer.curr,
+      guestNum: state.authReducer.guestNum,
+      attend: state.authReducer.attend
     }
   }
   
   const mapDispatchToProps = (dispatch) => {
     return {
-      updateUser: (user) => dispatch(updateUser(user)),
+      users: (user) => dispatch(users(user)),
+      requirements: (req) => dispatch(requirements(req)),
     }
   }
   

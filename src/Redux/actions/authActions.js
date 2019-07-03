@@ -1,11 +1,36 @@
-const updateUser = (user) => {
+const users = (user) => {
     return {
-        type: "UPDATE_USER",
+        type: "USERS",
         user
+    }
+}
+
+const currrentUser = (user) => {
+    return {
+        type: "CURRENT_USER",
+        user
+    }
+}
+
+const invitation = (guestNum, attend = "yes") => {
+    return {
+        type: "INVITATION",
+        attend,
+        guestNum
+    }
+}
+
+const requirements = (req) => {
+    return {
+        type: "REQUIREMENT",
+        req
     }
 }
 
 
 export {
-    updateUser,
+    users,
+    currrentUser,
+    invitation,
+    requirements
 }
