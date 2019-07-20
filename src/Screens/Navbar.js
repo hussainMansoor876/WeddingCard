@@ -28,6 +28,7 @@ class Navbar extends Component {
               <Link className="navbar-brand" to="/invitation">Invitation</Link>
               <Link className="navbar-brand" to="/menu">Menu</Link>
               <Link className="navbar-brand" to="/location">Location</Link>
+              <Link className="navbar-brand" to="/Songs">Songs</Link>
 
             </div>
             {/* <div className="collapse navbar-collapse" id="myNavbar">

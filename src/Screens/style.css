@@ -5,6 +5,13 @@
     text-align: center;
 }
 
+.song{
+    margin: 15px 22%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px 0 60px 0;
+    text-align: center;
+}
+
 .input1{
     margin: 10px 0;
     width: 60%;
@@ -24,6 +31,16 @@
     background-color: #37A000;
     color: #fff;
     width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-color: transparent;
+    height: 35px;
+}
+
+.btnLike{
+    margin: 10px 0;
+    background-color: #37A000;
+    color: #fff;
+    width: 15%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-color: transparent;
     height: 35px;
