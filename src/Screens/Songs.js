@@ -38,11 +38,11 @@ class Songs extends Component {
     await firebase.database().ref('songs').on('child_added', (val) => {
       var value = val.val()
       like[i] = false
-      console.log(this.state)
+      // console.log(this.state)
       arr.push(value)
       i++;
     })
-    console.log('arr', arr)
+    // console.log('arr', arr)
     this.setState({ arr, disable: false, like })
   }
 
